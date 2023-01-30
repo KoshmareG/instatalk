@@ -1,0 +1,11 @@
+<%= turbo_stream_from :rooms %>
+<h1>Комнаты</h1>
+<div class="mt-3">
+  <%= render 'rooms/form', room: @room %>
+</div>
+<p id="notice"><%= notice %></p>
+<ul class="mt-3">
+  <%= turbo_frame_tag :rooms do %>
+    <%= render @rooms %>
+  <% end %>
+</ul>

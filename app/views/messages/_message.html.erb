@@ -1,0 +1,9 @@
+<div class="row mt-1">
+  <div class="col-2">
+    <%= message.user.nickname %>
+  </div>
+  <div class="col-10">
+    <%= message.created_at.strftime('%H:%M') %>
+    <%= message.body %>
+  </div>
+</div>

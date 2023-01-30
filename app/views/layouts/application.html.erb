@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instatalk</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8" style="height: 95vh">
+          <div class="card text-center mt-3 mb-3">
+            <div class="card-body">
+              Добро пожаловать в Instatalk, <%= current_user.nickname %>
+            </div>
+          </div>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
