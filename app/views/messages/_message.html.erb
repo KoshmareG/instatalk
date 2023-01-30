@@ -1,9 +1,21 @@
-<div class="row mt-1">
-  <div class="col-2">
-    <%= message.user.nickname %>
-  </div>
-  <div class="col-10">
-    <%= message.created_at.strftime('%H:%M') %>
-    <%= message.body %>
+<div class="row gx-1 mt-2">
+  <div class="col-md-auto">
+    <div class="card border-0 shadow-sm bg-body-tertiary">
+      <div class="card-body pt-1 pb-1">
+        <div class="row">
+          <div class="col-md-auto pe-1">
+            <p class="fw-bold text-primary mb-1"><small><%= message.user.nickname %></small></p>
+          </div>
+          <div class="col ps-1">
+            <p class="text-muted mb-1"><small><%= message.created_at.strftime('%H:%M') %></small></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <%= message.body %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

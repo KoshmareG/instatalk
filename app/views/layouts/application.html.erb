@@ -10,15 +10,25 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="bg-body-secondary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top mb-3">
+      <div class="container-fluid">
+        <%= link_to 'Instatalk', root_path, class: 'navbar-brand' %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <p class="nav-link active mb-0">Ваш ник: <%= current_user.nickname %></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-8" style="height: 95vh">
-          <div class="card text-center mt-3 mb-3">
-            <div class="card-body">
-              Добро пожаловать в Instatalk, <%= current_user.nickname %>
-            </div>
-          </div>
+        <div class="col-md-8 full-display">
           <%= yield %>
         </div>
       </div>
