@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: instatalk_production
-  username: instatalk
-  password: <%= ENV["INSTATALK_DATABASE_PASSWORD"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
