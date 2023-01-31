@@ -1,0 +1,10 @@
+ru:
+  app:
+    label: 'Instatalk'
+    your_nickname: 'Ваш никнейм'
+  messages:
+    message: 'Сообщение'
+  rooms:
+    rooms: 'Комнаты'
+    room: 'Комната'
+    create_room: 'Создать команту'

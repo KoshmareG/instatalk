@@ -6,7 +6,7 @@
         <%= link_to '', root_path, class: 'bi bi-arrow-90deg-up fs-4' %>
       </div>
       <div class="col">
-        <h3 class="mb-0">Комната <%= @room.id %></h3>
+        <h3 class="mb-0"><%= "#{t('rooms.room')} #{@room.id}" %></h3>
       </div>
     </div>
   </div>

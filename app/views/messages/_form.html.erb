@@ -1,4 +1,4 @@
 <%= form_with model: [@room, message], data: { controller: "chat_refresh",
   action: "turbo:submit-end->chat_refresh#clearInput" } do |form| %>
-  <%= form.text_field :body, placeholder: 'Сообщение', class: 'form-control' %>
+  <%= form.text_field :body, placeholder: t('messages.message'), class: 'form-control' %>
 <% end %>
