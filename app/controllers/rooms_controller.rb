@@ -4,6 +4,7 @@ class RoomsController < ApplicationController
   def index
     @rooms = Room.all
     @room = Room.new
+    @users_online = User.where(status: true)
   end
 
   def show
@@ -14,6 +15,7 @@ class RoomsController < ApplicationController
     @room = Room.create!
 
     @room.broadcast_append_to :rooms
+
     redirect_to @room, notice: 'Комната успешно создана!'
   end
 
