@@ -17,6 +17,7 @@ gem 'redis', '~> 4.0'
 gem 'turbo-rails'
 
 group :development, :test do
+  gem 'bullet'
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
 end
 

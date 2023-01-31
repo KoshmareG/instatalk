@@ -12,7 +12,7 @@
   </div>
   <div class="card-body d-flex flex-column-reverse overflow-auto" id="chat-container">
     <%= turbo_frame_tag :messages do %>
-      <%= render @room.messages.except(@new_message) %>
+      <%= render @room.messages.includes(:user).except(@new_message) %>
     <% end %>
   </div>
   <div class="card-footer">
