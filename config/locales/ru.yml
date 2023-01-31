@@ -9,4 +9,4 @@ ru:
     room: 'Комната'
     create_room: 'Создать команту'
   users:
-    users_online: 'Пользователи онлайн'
+    online_now: 'Сейчас онлайн'
