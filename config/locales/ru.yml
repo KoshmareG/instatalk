@@ -2,11 +2,21 @@ ru:
   app:
     label: 'Instatalk'
     your_nickname: 'Ваш никнейм'
+  global:
+    sign_in: 'Вход'
+    registration: 'Регистрация'
+    sign_out: 'Выйти'
+    profile: 'Профиль'
+    cancel: 'Отмена'
   messages:
     message: 'Сообщение'
   rooms:
     rooms: 'Комнаты'
     room: 'Комната'
     create_room: 'Создать команту'
+    delete_room: 'Удалить комнату'
+  room:
+    delete_room: 'Удалить комнату'
+    are_you_sure: 'Вы действительно хотите удалить комнату?'
   users:
     online_now: 'Сейчас онлайн'

@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show]
+  before_action :authenticate_user!, only: %i[create destroy]
+  before_action :set_room, only: %i[show destroy]
 
   def index
     @rooms = Room.all
@@ -14,9 +15,13 @@ class RoomsController < ApplicationController
   def create
     @room = Room.create!
 
-    @room.broadcast_append_to :rooms
+    redirect_to @room
+  end
 
-    redirect_to @room, notice: 'Комната успешно создана!'
+  def destroy
+    @room.destroy
+
+    redirect_to root_path
   end
 
   private

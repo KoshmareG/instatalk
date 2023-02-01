@@ -5,7 +5,9 @@
       <div class="card-body">
         <h3><%= t('rooms.rooms') %></h3>
         <div class="mt-3 mb-3">
-          <%= render 'rooms/form', room: @room %>
+          <% if user_signed_in? %>
+            <%= render 'rooms/form', room: @room %>
+          <% end %>
         </div>
         <div class="list-group">
           <%= turbo_frame_tag :rooms do %>

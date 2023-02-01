@@ -1,9 +1,14 @@
 class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+
   before_create :generate_nickname
 
-  has_many :messages
+  has_many :messages, dependent: :destroy
 
-  after_update_commit :broadcast_to_online_users
+  validates :nickname, presence: true
+
+  before_validation :generate_nickname
 
   private
 

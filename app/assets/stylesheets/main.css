@@ -5,3 +5,8 @@
 .room_area {
   height: calc(100% - 20px)
 }
+
+.tr-btn {
+  background: transparent;
+  border: none;
+}

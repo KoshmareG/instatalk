@@ -1,15 +1,17 @@
-<div class="row gx-1 mt-2">
+<div class="row gx-1 mt-2 <%= 'justify-content-center' if message.technical %>">
   <div class="col-auto">
     <div class="card border-0 shadow-sm bg-body-tertiary">
       <div class="card-body pt-1 pb-1">
-        <div class="row">
-          <div class="col-auto pe-1">
-            <p class="fw-bold text-primary mb-1"><small><%= message.user.nickname %></small></p>
+        <% unless message.technical %>
+          <div class="row">
+            <div class="col-auto pe-1">
+              <p class="fw-bold text-primary mb-1"><small><%= message.user.nickname %></small></p>
+            </div>
+            <div class="col ps-1">
+              <p class="text-muted mb-1"><small><%= message.created_at.strftime('%H:%M') %></small></p>
+            </div>
           </div>
-          <div class="col ps-1">
-            <p class="text-muted mb-1"><small><%= message.created_at.strftime('%H:%M') %></small></p>
-          </div>
-        </div>
+        <% end %>
         <div class="row">
           <div class="col">
             <%= message.body %>
