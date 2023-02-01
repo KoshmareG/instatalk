@@ -18,5 +18,6 @@ ru:
   room:
     delete_room: 'Удалить комнату'
     are_you_sure: 'Вы действительно хотите удалить комнату?'
+    room_deleted: 'Комната удалена'
   users:
     online_now: 'Сейчас онлайн'

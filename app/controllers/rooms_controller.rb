@@ -19,6 +19,10 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+    @message = @room.messages.create!(body: I18n.t('room.room_deleted'), technical: true)
+
+    @message.broadcast_append_to @room
+
     @room.destroy
 
     redirect_to root_path
