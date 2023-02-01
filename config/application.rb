@@ -18,5 +18,9 @@ module Instatalk
     config.load_defaults 7.0
     config.i18n.default_locale = :ru
     config.generators.system_tests = nil
+
+    config.after_initialize do |_config|
+      User.update_all(status: false)
+    end
   end
 end

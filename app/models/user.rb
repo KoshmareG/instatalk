@@ -13,11 +13,6 @@ class User < ApplicationRecord
   private
 
   def generate_nickname
-    self.nickname = Faker::Name.first_name.downcase
-  end
-
-  def broadcast_to_online_users
-    broadcast_remove_to('online_users') unless status
-    broadcast_append_to('online_users', target: 'users-online') if status
+    self.nickname = Faker::Name.first_name.downcase if self.nickname.blank?
   end
 end
