@@ -17,6 +17,7 @@ ru:
     cancel: 'Отмена'
     save: 'Сохранить'
     back: 'Вернуться'
+    or: 'или'
   messages:
     message: 'Сообщение'
   rooms:
@@ -28,6 +29,9 @@ ru:
     delete_room: 'Удалить комнату'
     are_you_sure: 'Вы действительно хотите удалить комнату?'
     room_deleted: 'Комната удалена'
+    need_to_sign_in: 'Для отправки сообщения необходимо'
+    sign_in: 'Войти'
+    registration: 'Зарегистрироваться'
   users:
     online_now: 'Сейчас онлайн'
   user:
