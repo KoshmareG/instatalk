@@ -1,24 +1,29 @@
-# README
+# Instatalk
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails application for instant messaging in public rooms using Hotwire.
 
-Things you may want to cover:
+Create a room and communicate with people.
 
-* Ruby version
+### Run
 
-* System dependencies
+For the application to work, you will need the `Ruby` and `Node` languages installed. It is also necessary to have `Redis` and `PostgreSQL` databases.
 
-* Configuration
+The application is built on Ruby on `Rails 7.0.4` and `Ruby 3.1.2`.
 
-* Database creation
+Иefore runing the application, run the commands from the project folder:
 
-* Database initialization
+```
+$ bundle
+$ rails db:create
+$ rails db:migrate
+$ yarn build
+$ yarn build:css
+```
 
-* How to run the test suite
+And run the app:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rails s
+```
 
-* Deployment instructions
-
-* ...
+The application will be available at `http://localhost:3000/`.
