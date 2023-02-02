@@ -5,6 +5,7 @@ ruby '3.1.2'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'devise'
+gem 'devise-i18n'
 gem 'faker'
 gem 'jbuilder'
 gem 'jsbundling-rails'
