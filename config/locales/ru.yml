@@ -1,4 +1,11 @@
 ru:
+  activerecord:
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
   app:
     label: 'Instatalk'
     your_nickname: 'Ваш никнейм'
@@ -8,6 +15,8 @@ ru:
     sign_out: 'Выйти'
     profile: 'Профиль'
     cancel: 'Отмена'
+    save: 'Сохранить'
+    back: 'Вернуться'
   messages:
     message: 'Сообщение'
   rooms:
@@ -21,3 +30,12 @@ ru:
     room_deleted: 'Комната удалена'
   users:
     online_now: 'Сейчас онлайн'
+  user:
+    forgot_password: 'Забыли пароль?'
+    delete_user: 'Удалить аккаунт'
+    are_you_sure: 'Вы действительно хотите удалить аккаунт?'
+    leave_blank: 'Оставьте пустым если не хотите изменять пароль'
+    need_to_fill: 'Необходимо заполнить для приминения изминений'
+    new_password: 'Новый пароль'
+    reset_password: 'Сбрость пароль'
+    change_profile: 'Изменть профиль'
