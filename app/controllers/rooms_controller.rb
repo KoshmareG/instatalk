@@ -5,7 +5,7 @@ class RoomsController < ApplicationController
   def index
     @rooms = Room.all
     @room = Room.new
-    @users_online = User.where(status: true)
+    @users_online = User.where(id: $redis_users_online.hgetall('users').keys)
   end
 
   def show
@@ -14,6 +14,8 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.create!
+
+    @room.broadcast_append_to :rooms
 
     redirect_to @room
   end

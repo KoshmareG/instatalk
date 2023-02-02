@@ -1,13 +1,13 @@
 class OnlineChannel < Turbo::StreamsChannel
   def subscribed
-    current_user&.update!(status: true)
+    $redis_users_online.hset('users', current_user.id, current_user.nickname)
     current_user&.broadcast_append_to('online_users', target: 'users-online')
     super
   end
 
   def unsubscribed
-    current_user&.update!(status: false)
-    current_user&.broadcast_remove_to('online_users')
+    $redis_users_online.hdel('users', current_user.id)
+    current_user&.broadcast_remove_to('online_users', target: "user_#{current_user.id}")
     super
   end
 end
