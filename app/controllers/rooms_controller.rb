@@ -24,6 +24,7 @@ class RoomsController < ApplicationController
     @message = @room.messages.create!(body: I18n.t('room.room_deleted'), technical: true)
 
     @message.broadcast_append_to @room
+    @room.broadcast_remove_to('rooms', target: "room_#{@room.id}")
 
     @room.destroy
 
