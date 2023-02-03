@@ -29,7 +29,7 @@ $ rails s
 The application will be available at `http://localhost:3000/`.
 
 ### Database in production
-In the `production` environment, you must specify the database login and password in the environment variables `DATABASE_USERNAME` and `DATABASE_PASSWORD` or specify explicitly in `config/storage.yml`:
+In the `production` environment, you must specify the database login and password in the environment variables `DATABASE_USERNAME` and `DATABASE_PASSWORD` or specify explicitly in `config/database.yml`:
 
 ```
 production:
