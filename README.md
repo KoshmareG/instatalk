@@ -10,7 +10,7 @@ For the application to work, you will need the `Ruby` and `Node` languages insta
 
 The application is built on Ruby on `Rails 7.0.4` and `Ruby 3.1.2`.
 
-Иefore runing the application, run the commands from the project folder:
+Before runing the application, run the commands from the project folder:
 
 ```
 $ bundle
@@ -27,3 +27,12 @@ $ rails s
 ```
 
 The application will be available at `http://localhost:3000/`.
+
+### Database in production
+In the `production` environment, you must specify the database login and password in the environment variables `DATABASE_USERNAME` and `DATABASE_PASSWORD` or specify explicitly in `config/storage.yml`:
+
+production:
+  <<: *default
+  database: instatalk_production
+  username: #Your database username
+  password: #Your database password
