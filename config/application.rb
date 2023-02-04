@@ -14,6 +14,12 @@ require 'action_cable/engine'
 Bundler.require(*Rails.groups)
 
 module Instatalk
+  def self.redis
+    @redis ||= ConnectionPool::Wrapper.new do
+      Redis.new(url: ENV["REDIS_URL"], namespace: "#{ENV["REDIS_URL"]}/3")
+    end
+  end
+
   class Application < Rails::Application
     config.load_defaults 7.0
     config.i18n.default_locale = :ru
