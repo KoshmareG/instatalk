@@ -11,6 +11,8 @@ class MessagesController < ApplicationController
       @new_message.broadcast_append_to @new_message.room
     end
 
+    update_user_activity(current_user)
+
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path
   end
