@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-lg-6 col-md-8 col-12 offset-lg-3 offset-md-3">
     <h1>Изменить пароль</h1>
+    <h4><%= t('user.your_nickname') %>: <%= resource.nickname %></h4>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}, html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="mb-3">
