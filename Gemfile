@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 gem 'bootsnap', require: false
-gem 'connection_pool', '~> 2.2', '>= 2.2.1'
 gem 'cssbundling-rails'
 gem 'devise'
 gem 'devise-i18n'

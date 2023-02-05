@@ -75,7 +75,6 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
     concurrent-ruby (1.2.0)
-    connection_pool (2.3.0)
     crass (1.0.6)
     cssbundling-rails (1.1.2)
       railties (>= 6.0.0)
@@ -211,7 +210,6 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bullet
-  connection_pool (~> 2.2, >= 2.2.1)
   cssbundling-rails
   debug
   devise
