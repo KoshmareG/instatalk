@@ -26,7 +26,7 @@
                   <button class="nav-link active tr-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <%= current_user.nickname %>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu border-0 shadow-sm">
                     <li><%= link_to t('global.profile'), edit_user_registration_path, class: 'dropdown-item' %></li>
                     <li><%= button_to t('global.sign_out'), destroy_user_session_path, method: :delete, class: 'dropdown-item tr-btn' %></li>
                   </ul>
@@ -38,7 +38,7 @@
                   <button class="nav-link active tr-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <%= t('global.guest') %>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu border-0 shadow-sm">
                     <li><%= link_to t('global.sign_in'), new_user_session_path, class: 'dropdown-item' %></li>
                     <li><%= link_to t('global.registration'), new_user_registration_path, class: 'dropdown-item' %></li>
                   </ul>
