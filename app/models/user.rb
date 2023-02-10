@@ -13,6 +13,6 @@ class User < ApplicationRecord
   private
 
   def generate_nickname
-    self.nickname = Faker::Name.first_name.downcase if self.nickname.blank?
+    self.nickname = Faker::Name.first_name if self.nickname.blank?
   end
 end
