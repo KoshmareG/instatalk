@@ -10,7 +10,7 @@ class OnlineChannel < Turbo::StreamsChannel
   def unsubscribed
     Instatalk.redis.hincrby('users', current_user&.id, -1)
 
-    broadcast_remove_user if Instatalk.redis.hget('users', current_user&.id).to_i == 0
+    broadcast_remove_user if Instatalk.redis.hget('users', current_user&.id).to_i <= 0
 
     super
   end
