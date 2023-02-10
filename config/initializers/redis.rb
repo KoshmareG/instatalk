@@ -1,0 +1,1 @@
+Instatalk.redis.del('users')
