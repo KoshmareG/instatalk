@@ -18,6 +18,7 @@ ru:
     save: 'Сохранить'
     back: 'Вернуться'
     or: 'или'
+    guest: 'Гость'
   messages:
     message: 'Сообщение'
   rooms:
