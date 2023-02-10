@@ -5,7 +5,7 @@
         <h1>Вход</h1>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
           <% if flash[:alert].present? %>
-            <div class="alert alert-danger alert-dismissible fade show"  role="alert">
+            <div class="alert alert-danger alert-dismissible border-0 shadow-sm"  role="alert">
               <%= flash[:alert] %>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
