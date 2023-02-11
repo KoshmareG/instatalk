@@ -22,6 +22,9 @@
       <div class="card-body">
         <h3><%= t('users.online_now') %></h3>
         <%= turbo_frame_tag "users-online" do %>
+          <% if user_signed_in? %>
+            <%= render partial: 'users/user', locals: { user: current_user } %>
+          <% end %>
           <%= render partial: 'users/user', collection: @users_online %>
         <% end %>
       </div>
