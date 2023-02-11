@@ -5,7 +5,7 @@ class RoomsController < ApplicationController
   def index
     @rooms = Room.all
     @room = Room.new
-    @users_online = User.where(id: Instatalk.redis.hgetall('users').keys).where.not(id: current_user.id)
+    @users_online = User.where(id: Instatalk.redis.hgetall('users').keys).where.not(id: current_user&.id)
   end
 
   def show
